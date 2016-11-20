@@ -20,10 +20,12 @@ Route::post('/admin/login', 'AdminController@login');
 Route::group(['middleware'=>'admin'],function(){
 
 	Route::get('/admin/home', 'HomeController@dashboard');
-	Route::get('/admin/menu/add', 'HomeController@showAddMenu');
+	Route::get('/admin/menu', 'MenuController@showAddMenu');
+	Route::post('/admin/menu/add', 'MenuController@mainMenuAdd');
+	Route::post('/admin/menu/submenu', 'MenuController@subMenuAdd');
+	Route::post('/admin/logo', 'LogoController@logo');
 
-});
 
-Route::get('/admin', function() {
-    return view('admin.register');
+	Route::get('/admin/logo', 'LogoController@showLogo');
+
 });

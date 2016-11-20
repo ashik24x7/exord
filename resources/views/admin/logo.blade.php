@@ -32,62 +32,22 @@
                     @if(session('message'))
                         <p class="success"> {{ session('message') }} </p>
                     @endif
-                    <form role="form" method="post" action="{{ url('/admin/menu/add') }}">
+                    <form role="form" method="post" action="{{ url('/admin/logo') }}" enctype="multipart/form-data">
                     {{ csrf_field() }}
                         <div class="form-group">
-                            <div class="col-md-2" style="font-size: 25px;padding: 8px 4px;color: rgb(102, 102, 102);">
-                                <label class="control-label">Menu</label>
-                            </div>
                             <div class="col-md-5">
-                                <input type="text" placeholder="Write menu name..." class="form-control" name="menu_name" value="{{ old('menu_name')}}" required="required">
-                                <span class="validation_error">{{ $errors->first('menu_name') }}</span>
+                                <input type="file" placeholder="Write menu name..." class="form-control" name="logo" value="{{ old('logo')}}" required="required">
+                                <span class="validation_error">{{ $errors->first('logo') }}</span>
                             </div>
                             <div class="col-md-2">
-                                <select name='position' id="" class="form-control" required="required">
-                                    @for($i= 1; $i <= count($menu)+1; $i++)
-                                        <option value="{{$i}}">{{$i}}</option>
-                                    @endfor
+                                <select name='active' id="" class="form-control" required="required">
+                                    <option value="1">Active</option>
+                                    <option value="0">Not Active</option>
                                 </select>
-                                {{ $errors->first('position') }}
+                                {{ $errors->first('active') }}
                             </div>
                             <div class="col-md-3">
-                                 <button type="submit" class="btn btn-primary btn-lg">Submit</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="col-md-10 col-md-offset-1 compose_form">
-                   <!--  @if(session('message'))
-                        <p class="error"> {{ session('message') }} </p>
-                    @endif -->
-                    <form role="form" method="post" action="{{ url('/admin/menu/submenu') }}">
-                    {{ csrf_field() }}
-                        <div class="form-group">
-                            <div class="col-md-2" style="font-size: 25px;padding: 8px 4px;color: rgb(102, 102, 102);">
-                                <label class="control-label">Sub Menu</label>
-                            </div>
-                            <div class="col-md-3">
-                                <select name='main_menu' id="" class="form-control" required="required">
-                                    @foreach($menu as $key)
-                                        <option value="{{$key->id}}">{{$key->menu_name}}</option>
-                                    @endforeach
-                                    
-                                </select>
-                                {{ $errors->first('main_menu') }}
-                            </div>
-                            <div class="col-md-4">
-                                <input type="text" placeholder="Write submenu name..." class="form-control" name="menu_name" value="{{ old('menu_name')}}" required="required">
-                                <span class="validation_error">{{ $errors->first('menu_name') }}</span>
-                            </div>
-                            <div class="col-md-2">
-                                <select name='position' id="" class="form-control" required="required">
-                                    <option value="1">1</option>
-                                    
-                                </select>
-                                {{ $errors->first('position') }}
-                            </div>
-                            <div class="col-md-1">
-                                 <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                                 <button type="submit" class="btn btn-primary btn-lg">Upload</button>
                             </div>
                         </div>
                     </form>
@@ -99,18 +59,7 @@
                 <div class="col-md-10 col-md-offset-1 panel">
                     <div class="panel-body" style="font-size: 24px;line-height: 38px;">
                         <ul class="stylish-lists">
-                            @foreach($menu as $key)
-                            <li>{{$key->menu_name}} <a href="">Edit</a>
-                                <?php $submenu = \App\Menu::where('main_menu',$key->id)->get(); ?>
-                                @if($submenu)
-                                    <ul>
-                                        @foreach($submenu as $sub)
-                                            <li>{{$sub->menu_name}} <a href="">Edit</a></li> 
-                                        @endforeach
-                                    </ul>
-                                @endif
-                            </li>
-                            @endforeach
+                            
                         </ul>
                     </div>
                 </div>

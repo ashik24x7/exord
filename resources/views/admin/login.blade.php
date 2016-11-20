@@ -8,12 +8,12 @@
         <title>Exord - Admin</title>
 
         <!-- Bootstrap -->
-        <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <link href="/css/waves.min.css" type="text/css" rel="stylesheet"><link rel="stylesheet" href="/css/nanoscroller.css">
+        <link href="/dashboard/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/dashboard/css/waves.min.css" type="text/css" rel="stylesheet"><link rel="stylesheet" href="/dashboard/css/nanoscroller.css">
         <!--        <link rel="stylesheet" href="css/nanoscroller.css">-->
-        <link href="/css/style.css" type="text/css" rel="stylesheet">
-        <link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-        <link href="/css/custom.css" type="text/css" rel="stylesheet">
+        <link href="/dashboard/css/style.css" type="text/css" rel="stylesheet">
+        <link href="/dashboard/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <link href="/dashboard/css/custom.css" type="text/css" rel="stylesheet">
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -30,7 +30,7 @@
                     @if(session('message'))
                         <p class="error"> {{ session('message') }} </p>
                     @endif
-                    <form class="m-t" role="form" action="{{ url('/login') }}" method="post">
+                    <form class="m-t" role="form" action="{{ url('/admin/login') }}" method="post">
                         {{ csrf_field() }}
                          <div class="form-group">
                             <input type="text" class="form-control" placeholder="Username" name="username" value="{{ old('username') }}">
@@ -48,8 +48,8 @@
                 </div>
             </div>
         </div>
-        <script type="text/javascript" src="js/jquery.min.js"></script>
-        <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/dashboard/js/jquery.min.js"></script>
+        <script type="text/javascript" src="/dashboard/bootstrap/js/bootstrap.min.js"></script>
         <script src="js/pace.min.js"></script>
     </body>
 </html>

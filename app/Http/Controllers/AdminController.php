@@ -43,7 +43,7 @@ class AdminController extends Controller
     }
 
     public function showLogin(){
-    	return view('login');
+    	return view('admin.login');
     }
 
     public function login(Request $request){

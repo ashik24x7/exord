@@ -12,7 +12,5 @@ class HomeController extends Controller
     public function dashboard(){
     	return view('admin.home');
     }
-    public function showAddMenu(){
-    	return view('admin.add-menu');
-    }
+    
 }

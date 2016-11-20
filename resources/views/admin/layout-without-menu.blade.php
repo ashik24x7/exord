@@ -184,6 +184,12 @@
                             <li>
                                 <a href="/../dashboard/home"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboard </span></a>
                             </li>
+                            <li>
+                                <a href="/admin/logo"><i class="fa fa-envelope"></i> <span class="nav-label">Logo</span></a>
+                            </li>
+                            <li>
+                                <a href="/admin/menu"><i class="fa fa-envelope"></i> <span class="nav-label">Menu </span></a>
+                            </li>
                             <li class="active">
                                 <a href=""><i class="fa fa-envelope"></i> <span class="nav-label">Menues</span><span class="fa arrow"></span></a>
                                 <ul class="nav nav-second-level active">
