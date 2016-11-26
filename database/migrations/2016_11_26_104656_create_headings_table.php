@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateLogosTable extends Migration
+class CreateHeadingsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,14 @@ class CreateLogosTable extends Migration
      */
     public function up()
     {
-        Schema::create('logos', function (Blueprint $table) {
+        Schema::create('headings', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('logo');
-            $table->tinyInteger('active')->nullable();
-            $table->string('updated_by');
+            $table->string('heading');
+            $table->text('content');
+            $table->text('path');
+            $table->integer('position')->nullable();
+            $table->tinyInteger('visibility');
+            $table->string('added_by');
             $table->timestamps();
         });
     }
@@ -29,6 +32,6 @@ class CreateLogosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('logos');
+        Schema::dropIfExists('headings');
     }
 }

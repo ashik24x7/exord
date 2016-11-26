@@ -47,6 +47,7 @@
 
 <div class="styler">
     <div class="icon">
+
         <img src="img/icon/cloud.png" alt="">
     </div>
     <div class="styleInner">
@@ -133,7 +134,11 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-2 col-sm-3 col-xs-6">
-                        <a href="index.html" class="logo"><img src="img/logo.png" alt=""></a>
+                        <a href="index.html" class="logo">
+                            @if(Storage::disk('public')->has('photo/logo/'.$logo->logo))
+                                <img src="{{ Storage::url('photo/logo/'.$logo->logo) }}" alt="logo"></a>
+                            @endif
+                        </a>
                     </div>
                     <div class="col-md-10 col-sm-9 col-xs-6">
                         <!-- nav Icon-->
@@ -172,13 +177,15 @@
                     <div class="col-md-8 col-md-offset-2">
                         <div class="home_text  animated a_fu">
                             <div class="home_cell">
-                                <h1>The future of <br>product is here!</h1>
-                                <p>People always try to find the best solutions of their problems. We  <br>came up with that! Enter your email to get all the access to our service.</p>
+                                <h1>{{$heading->heading}}</h1>
+                                <p>{{$heading->content}}</p>
                                 <div class="home_btn  animated a_fu adn104ss">
                                     <a href="#" class="hvr-bounce-to-right">Buy using PayPal</a>
                                 </div>
                                 <div class="home_img">
-                                    <img src="img/12.jpg" alt="">
+                                    @if(Storage::disk('public')->has('photo/heading/'.$heading->path))
+                                        <img src="{{ Storage::url('photo/heading/'.$heading->path) }}" alt="logo"></a>
+                                    @endif
                                 </div>
                             </div>
                         </div>

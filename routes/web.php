@@ -24,8 +24,12 @@ Route::group(['middleware'=>'admin'],function(){
 	Route::post('/admin/menu/add', 'MenuController@mainMenuAdd');
 	Route::post('/admin/menu/submenu', 'MenuController@subMenuAdd');
 	Route::post('/admin/logo', 'LogoController@logo');
-
-
 	Route::get('/admin/logo', 'LogoController@showLogo');
+
+	Route::get('/admin/heading', 'HeadingController@showHeading');
+	Route::post('/admin/heading', 'HeadingController@addHeading');
+
+
+	
 
 });
