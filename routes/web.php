@@ -28,6 +28,10 @@ Route::group(['middleware'=>'admin'],function(){
 
 	Route::get('/admin/heading', 'HeadingController@showHeading');
 	Route::post('/admin/heading', 'HeadingController@addHeading');
+	Route::get('/admin/benefit', 'BenefitController@showBenefit');
+	Route::post('/admin/benefit', 'BenefitController@addBenefit');
+	Route::get('/admin/package', 'PackageController@showPackage');
+	Route::post('/admin/package', 'PackageController@addPackage');
 
 
 	

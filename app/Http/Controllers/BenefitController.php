@@ -22,8 +22,9 @@ class BenefitController extends Controller
     	$data = $request->only('heading','content','visibility');
     	$data['added_by'] = auth()->guard('admin')->user()->id;
     	if(Benefit::create($data)){
-			return redirect()->to('/admin/work')->with('message','Content has added successfully');
+			return redirect()->to('/admin/benefit')->with('message','Content has added successfully');
 		}
-		return redirect()->to('/admin/work')->with('message','There is an error while adding content');
+		return redirect()->to('/admin/benefit')->with('message','There is an error while adding content');
 
     }
+}

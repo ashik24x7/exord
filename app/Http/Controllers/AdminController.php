@@ -28,7 +28,7 @@ class AdminController extends Controller
         if($photo){
             $photo_name = str_random(20).'.'.$photo->extension();
 
-            if($photo->move(public_path('photo/admin-photo'),$photo_name)){
+            if($photo->storeAs('photo/package', $photo_name, 'public')){
                  $data['photo'] = $photo_name;
                  Admin::create($data);
                  if($this->login($request)){

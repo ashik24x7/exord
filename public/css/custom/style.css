@@ -711,8 +711,9 @@ a.big_btn.two {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 235px;
-    z-index: -1; }
+    height: 330px;
+    z-index: -1;
+    }
     .hero_area.v3 .home_text .home_img img, .hero_area.v4 .home_text .home_img img {
       max-height: 100%;
       width: auto; }
@@ -742,7 +743,7 @@ a.big_btn.two {
       .hero_area:before {
         opacity: .6; } }
   .hero_area .home_text {
-    height: 780px;
+    height: 700px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -756,7 +757,8 @@ a.big_btn.two {
     -ms-flex-pack: center;
     -webkit-justify-content: center;
     justify-content: center;
-    padding-top: 75px; }
+    padding-top: 75px;
+    }
     @media only screen and (min-width: 0px) and (max-width: 991px) {
       .hero_area .home_text {
         text-align: center;

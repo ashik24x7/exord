@@ -182,43 +182,43 @@
                                 </div>
                             </li>
                             <li>
-                                <a href="/../dashboard/home"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboard </span></a>
+                                <a href="/admin/home"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboard </span></a>
                             </li>
                             <li>
                                 <a href="/admin/logo"><i class="fa fa-envelope"></i> <span class="nav-label">Logo</span></a>
+                                <ul class="nav nav-second-level active">
+                                    <li><a href="/admin/logo">Add Logo</a></li> 
+                                    <li><a href="/admin/logo/view"><b>View Logo</b></a></li>
+                                </ul>
                             </li>
                             <li>
-                                <a href="/admin/menu"><i class="fa fa-envelope"></i> <span class="nav-label">Menu </span></a>
-                            </li>
-                            <li class="active">
                                 <a href=""><i class="fa fa-envelope"></i> <span class="nav-label">Menues</span><span class="fa arrow"></span></a>
                                 <ul class="nav nav-second-level active">
-                                    <li><a href="/../dashboard/receive-complain">Compose</a></li> 
-                                    <li><a href="/../dashboard/complains/today"><b
-                                    @if(!empty($total))
-                                     style="font-weight: 700"
-                                    @endif;
-                                     >View Complains</b></a></li>
-                                    <!-- <li><a href="/../dashboard/receive-complain">General Query</a></li>  -->
-                                    
-                                    <li><a href="/../dashboard/complains/all">Complain History</a></li>
+                                    <li><a href="/admin/menu">Add Menu</a></li> 
+                                    <li><a href="/admin/menu/view"><b>View Menu</b></a></li>
                                 </ul>
-                            </li>
+                            </li>           
                             <li>
-                                <a href=""><i class="fa fa-bar-chart"></i> <span class="nav-label">Billings Detail</span><span class="fa arrow"></span></a>
-                                <ul class="nav nav-second-level" aria-expanded="true">
-                                    <li><a href="/../dashboard/receive-payment">Receive Payment</a></li>
-                                    <li><a href="/../dashboard/bills">Monthly Bill</a></li>
+                                <a href=""><i class="fa fa-envelope"></i> <span class="nav-label">Headings</span><span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level active">
+                                    <li><a href="/admin/heading">Add Heading</a></li> 
+                                    <li><a href="/admin/heading/view"><b>View Heading</b></a></li>
                                 </ul>
-                            </li>
-                             <li>
-                                <a href="#"><i class="fa fa-users"></i> <span class="nav-label">Customers Detail</span></span><span class="fa arrow"></span></a>
-                                <ul class="nav nav-second-level">
-                                    <li><a href="/../dashboard/customer-register">Customer Register</a></li>
-                                    <li><a href="/../dashboard/customers">All Customers</a></li>
-                                    <li><a href="/../dashboard/add-customer-into-exord-id">Add Into Exord ID</a></li>
+                            </li>                   
+                            <li>
+                                <a href=""><i class="fa fa-envelope"></i> <span class="nav-label">Benefits</span><span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level active">
+                                    <li><a href="/admin/benefit">Add Benefit</a></li> 
+                                    <li><a href="/admin/benefit/view"><b>View Benefit</b></a></li>
                                 </ul>
-                            </li>                           
+                            </li>                          
+                            <li>
+                                <a href=""><i class="fa fa-envelope"></i> <span class="nav-label">Packages</span><span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level active">
+                                    <li><a href="/admin/package">Add Package</a></li> 
+                                    <li><a href="/admin/package/view"><b>View Package</b></a></li>
+                                </ul>
+                            </li>                
                         </ul>
 
                     </div>

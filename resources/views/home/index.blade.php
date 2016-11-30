@@ -136,7 +136,7 @@
                     <div class="col-md-2 col-sm-3 col-xs-6">
                         <a href="index.html" class="logo">
                             @if(Storage::disk('public')->has('photo/logo/'.$logo->logo))
-                                <img src="{{ Storage::url('photo/logo/'.$logo->logo) }}" alt="logo"></a>
+                                <img src="{{ Storage::url('photo/logo/'.$logo->logo) }}" alt="logo" style="width: 200px;"></a>
                             @endif
                         </a>
                     </div>
@@ -179,12 +179,12 @@
                             <div class="home_cell">
                                 <h1>{{$heading->heading}}</h1>
                                 <p>{{$heading->content}}</p>
-                                <div class="home_btn  animated a_fu adn104ss">
+                                <!-- <div class="home_btn  animated a_fu adn104ss">
                                     <a href="#" class="hvr-bounce-to-right">Buy using PayPal</a>
-                                </div>
+                                </div> -->
                                 <div class="home_img">
                                     @if(Storage::disk('public')->has('photo/heading/'.$heading->path))
-                                        <img src="{{ Storage::url('photo/heading/'.$heading->path) }}" alt="logo"></a>
+                                        <img src="{{ Storage::url('photo/heading/'.$heading->path) }}" alt="logo" style="width: 420px; height: 396px;"></a>
                                     @endif
                                 </div>
                             </div>
@@ -202,7 +202,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
-                    <div class="h3 animated a_fu"><span>Prox</span> is one of the best product landing page for <br>showcasing your product to your customers. </div>
+                    <div class="h3 animated a_fu"><span>Exord Online</span> is one of the leading broad band internet service provider in Rampura, Badda and Khilgaon Area.</div>
                 </div>
             </div>
         </div>
@@ -210,7 +210,7 @@
 <!-- 02. /news_area -->
 
 <!-- 03. feature_area -->
-    <div id="features" class="feature_area sp90">
+    <!-- <div id="features" class="feature_area sp90">
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
@@ -254,7 +254,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 <!-- 03. /feature_area -->
 
 <!-- 04. ext_feature_area -->
@@ -263,24 +263,25 @@
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
                     <div class="section_title animated a_fu">
-                        <h1>The benefits</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy <br>nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                        <h1>Why Exord Online?</h1>
                     </div>
                 </div>
             </div>
             <div class="row">
+            @foreach($benefit as $key)
                 <div class="col-md-4 col-sm-6 animated a_fu">
                     <div class="single_service">
                         <div class="service_icon">
                             <img class="hvr-wobble-skew" src="img/icon/01.png" alt="">
                         </div>
                         <div class="service_content">
-                            <div class="h4">Easy Setup</div>
-                            <p>Lorem ipsum dolor sit amet, consec tetuer adipiscing elit, sed diam nonu mmy nibh euismod tincidunt.</p>
+                            <div class="h4">{{$key->heading}}</div>
+                            <p>{{$key->content}}</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 animated a_fu">
+            @endforeach
+            <!--     <div class="col-md-4 col-sm-6 animated a_fu">
                     <div class="single_service">
                         <div class="service_icon">
                             <img class="hvr-wobble-skew" src="img/icon/02.png" alt="">
@@ -334,7 +335,7 @@
                             <p>Lorem ipsum dolor sit amet, consec tetuer adipiscing elit, sed diam nonu mmy nibh euismod tincidunt.</p>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -346,13 +347,13 @@
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
                     <div class="section_title animated a_fu">
-                        <h1>It is still not too late! Order one today.</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy <br>nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                        <h1>It is still not too late! Get your internet connection today.</h1>
+                        <p>Your new connection is just a phone call away,<br> Call <b>01971-868600</b> to get your connection.</p>
                     </div>
                 </div>
-                <div class="col-md-12 text-center">
+                <!-- <div class="col-md-12 text-center">
                     <a href="#" class="big_btn two hvr-bounce-to-right animated a_fu adn106s">Order Now!</a>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -360,7 +361,7 @@
 
 
 <!-- 06. step_area -->
-    <div id="step" class="step_area sp90 gradient_bg_two sr_shadow">
+    <!-- <div id="step" class="step_area sp90 gradient_bg_two sr_shadow">
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
@@ -406,12 +407,12 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 <!-- 06. /step_area -->
 
 <!-- 07. product_area -->
 
-    <div id="product" class="product_area animated a_fu">
+   <!--  <div id="product" class="product_area animated a_fu">
             <div class="container">
                 <div class="row single_product">
                     <div class="col-md-6 col-md-offset-5 static">
@@ -441,7 +442,7 @@
                     </div>
                 </div>
             </div>
-    </div>
+    </div> -->
 <!-- 07. /product_area -->
 
 <!-- 08. pricing_area -->
@@ -450,24 +451,26 @@
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
                     <div class="section_title animated a_fu">
-                        <h1>Our products</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit <br>nibh euismod tincidunt ut laoreet dolore magna.</p>
+                        <h1>Our Packages</h1>
+                        <p>The popular internet packages are given below</p>
                     </div>
                 </div>
                 <div class="row price">
+                @foreach($package as $key)
                     <div class="col-md-3 col-sm-6 animated a_fu">
                         <div class="single_price">
-                            <div class="product_img" style="background-image: url(img/product/01.jpg);"></div>
-                            <div class="h4">VR Set 001</div>
-                            <div class="h4 currency">$149.00</div>
+                            <div class="product_img" style="background-image: url({{ Storage::url('photo/package/'.$key->path) }});"></div>
+                            <div class="h4">{{$key->heading}}</div>
+                            <div class="h4 currency">{{$key->price}}</div>
                             <span class="price_bar"></span>
-                            <p>Lorem ipsum dolor sit amet,  consectetuer adipiscing elit, diam nonummy nibh.</p>
+                            <p>{{$key->content}}</p>
                             <div class="price_btn">
                                 <a href="#" class="big_btn two hvr-bounce-to-right">Order Now!</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-6 animated a_fu">
+                @endforeach
+                    <!-- <div class="col-md-3 col-sm-6 animated a_fu">
                         <div class="single_price">
                             <div class="product_img">
                                 <div class="product_img" style="background-image: url(img/product/02.jpg);"></div>
@@ -508,7 +511,7 @@
                                 <a href="#" class="big_btn two hvr-bounce-to-right">Order Now!</a>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
